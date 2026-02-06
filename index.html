@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club Event Registration Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-content">
+        <div class="brand-block">
+          <p class="brand-tag">Mozilla Firefox Club</p>
+          <h1>Annual Club Summit 2026</h1>
+          <p class="subtitle">
+            Register quickly, stay informed, and secure your place at our biggest event of the year.
+          </p>
+        </div>
+        <div class="countdown-card" aria-live="polite">
+          <p class="countdown-label">Event starts in</p>
+          <div class="countdown-grid" id="countdown">
+            <div><span id="days">00</span><small>Days</small></div>
+            <div><span id="hours">00</span><small>Hours</small></div>
+            <div><span id="minutes">00</span><small>Minutes</small></div>
+            <div><span id="seconds">00</span><small>Seconds</small></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="container nav-links">
+        <a href="#event-details">Event Details</a>
+        <a href="#registration">Registration</a>
+        <a href="#contact">Contact Info</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="event-details" class="section container">
+        <h2>Event Details</h2>
+        <div class="details-grid">
+          <article class="detail-card">
+            <h3>Date & Time</h3>
+            <p>March 12, 2026 · 9:30 AM – 4:30 PM</p>
+          </article>
+          <article class="detail-card">
+            <h3>Venue</h3>
+            <p>Anna Auditorium, VIT University</p>
+          </article>
+          <article class="detail-card">
+            <h3>Highlights</h3>
+            <p>Keynote talks, startup showcase, networking, and workshops.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="registration" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Registration</h2>
+            <p>Complete all required details. Validation happens as you type.</p>
+          </div>
+
+          <div class="progress-wrapper" aria-label="Form completion progress">
+            <div class="progress-meta">
+              <span>Form Progress</span>
+              <span id="progress-text">0% complete</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <div class="form-grid">
+              <label>
+                Full Name *
+                <input type="text" name="fullName" placeholder="e.g., Alex Johnson" required />
+                <small class="error-message"></small>
+              </label>
+
+              <label>
+                Email Address *
+                <input type="email" name="email" placeholder="you@example.com" required />
+                <small class="error-message"></small>
+              </label>
+
+              <label>
+                Phone Number *
+                <input type="tel" name="phone" placeholder="10-digit number" required />
+                <small class="error-message"></small>
+              </label>
+
+              <label>
+                Academic Year *
+                <select name="year" required>
+                  <option value="">Select year</option>
+                  <option>1st Year</option>
+                  <option>2nd Year</option>
+                  <option>3rd Year</option>
+                  <option>4th Year</option>
+                  <option>Postgraduate</option>
+                </select>
+                <small class="error-message"></small>
+              </label>
+
+              <label class="full-width">
+                Why do you want to join this event? *
+                <textarea
+                  name="motivation"
+                  rows="4"
+                  placeholder="Share your goals in a sentence or two"
+                  required
+                ></textarea>
+                <small class="error-message"></small>
+              </label>
+            </div>
+            <button type="submit" class="btn-primary">Submit Registration</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Contact Info</h2>
+        <div class="contact-card">
+          <p><strong>Event Coordinator:</strong> Nikhil Amith</p>
+          <p><strong>Email:</strong> events@mozillafirefoxclub.org</p>
+          <p><strong>Phone:</strong> +989123456xxx</p>
+          <p><strong>Office Hours:</strong> Mon–Fri, 10:00 AM – 5:00 PM</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 Mozilla Firefox Club. All rights reserved.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
